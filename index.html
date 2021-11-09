@@ -20,6 +20,34 @@
 
     <script type="text/babel">
 
+        const Banner = () => {
+            const title = "Fuzzyness"
+            const subtile = "this website is very fuzzy"
+
+            // click handler is fired in the 'onClick' in the template below
+            // const handleClick = (e) => {
+            //     console.log('clicked')
+            //     console.log('the title is: ', title)
+            //     console.log(e)
+            // }
+
+            return (
+                <div className="banner">
+                    <h2>{title.toUpperCase()}</h2>
+                    <p>{subtile}</p>
+                    {/* <button onClick={handleClick}>Click me</button> */}
+                    {/* inline function: */}
+                    <button onClick={(e) => {
+                        console.log('hello')
+                        console.log(e)
+                    }}>Click me</button>
+                </div>
+            )
+        }
+
+        // render the component to the DOM
+        ReactDOM.render(<Banner />, document.getElementById('banner'))
+
         
     </script>
 </body>
