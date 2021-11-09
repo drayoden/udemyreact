@@ -5,4 +5,4 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
-### 09 - JSX & templates
+### 10 - template expressions & variables

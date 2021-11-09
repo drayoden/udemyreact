@@ -19,12 +19,21 @@
     <script type="text/babel">
         // Banner component below returns a JSX template
         // note below class attribute in JSX is 'className'
+        // dynamic use of variables, etc:
         const Banner = () => {
+            const title = "Welcome to my website"
+            const subtitle = "this is a very fuzzy website"
+            const address = "https://udemy.com"
+
             return (
                 // can only return ONE root element, cannot have a div at the same level but you can nest a div inside:
+                // dynamic use of variables, etc:
                 <div className="banner">
-                    <p>component content</p>
-                    <div></div>
+                    <h2>{ title.toUpperCase() }</h2> 
+                    <p>{ subtitle }</p>
+                    <p>Today's date: {new Date().toDateString()}</p>
+                    <p>Random number: {Math.random() * 10}</p>
+                    <a href={address}>Go to Udemy</a>
                 </div>
             )
         }
