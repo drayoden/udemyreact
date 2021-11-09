@@ -5,5 +5,4 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
-### 08 - react components
- - nav, sidbar, content, gallery could be components.
+### 09 - JSX & templates

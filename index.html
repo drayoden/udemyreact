@@ -18,10 +18,13 @@
 
     <script type="text/babel">
         // Banner component below returns a JSX template
+        // note below class attribute in JSX is 'className'
         const Banner = () => {
             return (
-                <div>
-                <p>component content</p>
+                // can only return ONE root element, cannot have a div at the same level but you can nest a div inside:
+                <div className="banner">
+                    <p>component content</p>
+                    <div></div>
                 </div>
             )
         }
