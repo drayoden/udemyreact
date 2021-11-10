@@ -5,7 +5,10 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
-18 - using useState
-  - see App.js:
-    - useState -- built-in react 'hook' -- see comments
-    - Note: in dev tools, name only updates on SECOND click because this is due to how react  schedules updates; console.log runs before the update.
+19 - how stat and render work
+  - initial start...
+    - index.js is the entry point. evaluates the App componnent (import) and returns the JSX template.
+    - JSX is not readable by the browser so it needs to be compiled
+      - JSX is compiled in to JS
+    - react DOM (virtual DOM) is used to inject the virtual elements into the real DOM
+    - when the state changes, the virtual DOM and real DOM are compared and only changes the elements in the real DOM that have changed. 
