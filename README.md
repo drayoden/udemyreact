@@ -5,10 +5,11 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
-14 - run the app
-  - `package.json` -- in the 'scripts' section use the 'start' script:
-    - `npm run start` -- starts a local dev server and opens it in the browser
-  - open dev tools -- all of the content for the site is inside the div with id="root".
-  - App component in /src/App.js - Note the export of the component at the bottem so it cam be imported in other places.
-  - in dev tools not the js files being loaded -- these are pre-compiled and do not exist in the given path
+15 - images in react
+  - /src/App.js -- note how logo.svg is imported at the top and used in <img src=""...
+  - !: create /src/assets for images to import later.
+  - can also use images in the /public folder
+  - do I use /src or /src/assets or /public?
+    - sitewide/problematic or images used outside of the 'root' element -- use /public
+    - all component specific images -- use /src or /src/assets
 
