@@ -1,0 +1,17 @@
+name: "create PR"
+on: push
+
+jobs:
+  createpr-onpush:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: create PR
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: 
+        title: ''
+        body: >
+        labels: report, automated pr
