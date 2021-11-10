@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
 
 function App() {
-  let name = 'forrest'
+  
+  const [name, setName ] = useState('forrest')  // array destrucure to a variable(name) and function(setName)
   
   const hClick = () => {
-    name = 'stormy'
+    setName('stormy')   // use the function 'setName' created above to change the value of 'name'
     console.log(name)
   }
 
