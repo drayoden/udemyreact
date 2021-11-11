@@ -3,8 +3,6 @@ import { useState } from 'react'
 
 function App() {
   
-  const [name, setName ] = useState('forrest')  // array destrucure to a variable(name) and function(setName)
-  
   // cycle through the events and display each one with proper formatting...
   const [events, setEvents] = useState([
     {title: "stormy's birthday bash",id: 1},
@@ -13,20 +11,28 @@ function App() {
   ])
 
 
-  const hClick = () => {
-    setName('stormy')   // use the function 'setName' created above to change the value of 'name'
-    console.log(name)
+  const hClick = (id) => {
+    
+    {/* the clicked event with the matching id will return false, thus not returned */}
+    {/* when the state depends on the previous state place in an anonymous function*/}
+    setEvents( (prevEvents) => {
+      return prevEvents.filter( (event) => {
+        return id !== event.id  
+      })
+    })
+    // console.log(id)
   }
 
   return (
     <div className="App">
-      <h1>Super pooper name is: {name}</h1>
-      <button onClick={hClick}>Change name</button>
 
-      {/* map method has 'index' as well... cannot be used as a key, just a counter */}
+      {/* map method has 'index' as well... cannot be used as a key, just an enumerator */}
       {events.map( (event, index) => (
         <div key={event.id}>
           <h2>{index} - {event.title}</h2>
+
+          {/* we don't want to invove the hClick function when the events are rendered so we put the handler in an anonymous function... */}
+          <button onClick={ () => hClick(event.id)}>DEL</button>
         </div>
       ) )}
     </div>
