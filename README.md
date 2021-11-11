@@ -5,5 +5,5 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
-21 - previous state
-  - notes in App.js comments
+22 - conditional templates
+  - see notes in comments in App.js

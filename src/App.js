@@ -3,13 +3,17 @@ import { useState } from 'react'
 
 function App() {
   
-  // cycle through the events and display each one with proper formatting...
+  // boolean state 
+  const [showEvents, setShowEvents] = useState(true)
+  
+  // cycle through the events and display each one...
   const [events, setEvents] = useState([
     {title: "stormy's birthday bash",id: 1},
     {title: "forrest's big 5",id: 2},
     {title: "the boys get catnip",id: 3}
   ])
 
+  console.log(showEvents)
 
   const hClick = (id) => {
     
@@ -25,9 +29,22 @@ function App() {
 
   return (
     <div className="App">
+      
+      {/* use showEvents to control which button is displayed... */}
+      {showEvents && (
+        <div>
+          <button onClick={ () => setShowEvents(false)}>hide events</button>
+        </div>
+      )}
 
-      {/* map method has 'index' as well... cannot be used as a key, just an enumerator */}
-      {events.map( (event, index) => (
+      {!showEvents && (
+        <div>
+          <button onClick={ () => setShowEvents(true)}>show events</button>
+        </div>
+      )}
+      
+      {/* showEvents controls if the events are displayed or not */}
+      {showEvents && events.map( (event, index) => (
         <div key={event.id}>
           <h2>{index} - {event.title}</h2>
 
