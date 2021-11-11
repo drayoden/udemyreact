@@ -5,10 +5,9 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
-19 - how stat and render work
-  - initial start...
-    - index.js is the entry point. evaluates the App componnent (import) and returns the JSX template.
-    - JSX is not readable by the browser so it needs to be compiled
-      - JSX is compiled in to JS
-    - react DOM (virtual DOM) is used to inject the virtual elements into the real DOM
-    - when the state changes, the virtual DOM and real DOM are compared and only changes the elements in the real DOM that have changed. 
+20 - output lists
+  - Initial run error: Warning each child in a list should have a unique "key" prop.
+    - each div for each event must have unique key
+    - added key but it is internal only, does not display in dev tools
+    - use map method to automatically iterate the events list
+    - when use the map method you get the 'index' value returned as well
