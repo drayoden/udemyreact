@@ -1,16 +1,11 @@
 import './App.css';
 import { useState } from 'react'
 
+// import the new component
+import Title from './components/Title'
+
 function App() {
-  
-  // 23 - state limitations:
-  // -- hooks (useState, etc.) can only be used in the top level of a component, i.e. useState could not be
-  // used inside the hClick function.
-  // 
-  // -- hooks have to be used within the scope of a component, i.e. useState could not be used ouside of the 
-  // App component, it must be used inside the scope of a component.
-
-
+   
   // boolean state 
   const [showEvents, setShowEvents] = useState(true)
   
@@ -35,8 +30,13 @@ function App() {
     // console.log(id)
   }
 
+
+  // remember; you cannot have multiple 'parents' inside the JSX, so the new Title component will be a child:
   return (
     <div className="App">
+      
+      {/* nesting the new Title component in App: */}
+      <Title />
       
       {/* use showEvents to control which button is displayed... */}
       {showEvents && (
