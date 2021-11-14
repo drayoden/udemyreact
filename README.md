@@ -9,9 +9,10 @@
   - have only seen/used one compoenet so far; App
   - normally, subsequent components would be nested inside App to create a tree of components
 
-                      App
+                      App (root component)
                       / \                  
                 Navbar  Eventlist
                 /    \        
               Logo   Menu
   
+  - each new component would have its own file, component function and template.
