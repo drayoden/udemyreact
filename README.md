@@ -5,4 +5,13 @@
     - update node
     - vscode extensions: live server, es7 react..., material icons
 
+23 - multiple components:
+  - have only seen/used one compoenet so far; App
+  - normally, subsequent components would be nested inside App to create a tree of components
 
+                      App
+                      / \                  
+                Navbar  Eventlist
+                /    \        
+              Logo   Menu
+  
