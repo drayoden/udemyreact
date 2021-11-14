@@ -1,11 +1,18 @@
 
 // this crates and exports the function all-in-one!
-export default function Title() {
-    return (
+
+// accepts props; see arg to function...
+// export default function Title(props) {
+// destructing props works too:
+export default function Title( {title, subtitle} ) {return (
         <div>
-            <h1 className="title">Fuzzy Kingdom Events</h1>
+            {/* regular way... */}
+            {/* <h1 className="title">{props.title}</h1> */}
+            {/* destructured way... */}
+            <h1 className="title">{title}</h1>
             <br />
-            <h2 className="subtitle">All the latest events in the fuzzy kingdom</h2>
+            {/* <h2 className="subtitle">{props.subtitle}</h2> */}
+            <h2 className="subtitle">{subtitle}</h2>
         </div>
     )
 }

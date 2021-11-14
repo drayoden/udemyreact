@@ -30,14 +30,21 @@ function App() {
     // console.log(id)
   }
 
+  const subtitle = "All the latest fuzzy kingdom events"
 
   // remember; you cannot have multiple 'parents' inside the JSX, so the new Title component will be a child:
   return (
     <div className="App">
       
       {/* nesting the new Title component in App: */}
-      <Title />
+      {/* passing props from App to Title. subtitle is a dynamic value... */}
+      <Title title="Fuzzy Kingdom Events" subtitle={subtitle}/>
+      {/* see Title component to allow this to be passed...*/}
+
+      {/* since the point here to make the Title component reusable: */}
+      <Title title="another title goes here" subtitle="another subtitle goes here"/>
       
+
       {/* use showEvents to control which button is displayed... */}
       {showEvents && (
         <div>
