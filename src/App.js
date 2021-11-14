@@ -3,6 +3,14 @@ import { useState } from 'react'
 
 function App() {
   
+  // 23 - state limitations:
+  // -- hooks (useState, etc.) can only be used in the top level of a component, i.e. useState could not be
+  // used inside the hClick function.
+  // 
+  // -- hooks have to be used within the scope of a component, i.e. useState could not be used ouside of the 
+  // App component, it must be used inside the scope of a component.
+
+
   // boolean state 
   const [showEvents, setShowEvents] = useState(true)
   
